@@ -3,18 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Para Ti ❤️</title>
+<title>❤️ Para Ti ❤️</title>
 
 <style>
 body{
     margin:0;
     font-family:Arial, sans-serif;
-    background: black;
+    background:black;
     color:white;
     overflow:hidden;
     text-align:center;
 }
 
+/* Pantallas */
 .pantalla{
     position:absolute;
     width:100%;
@@ -31,22 +32,32 @@ body{
     pointer-events:none;
 }
 
+/* Botón */
 button{
     padding:15px 30px;
-    font-size:20px;
+    font-size:22px;
     border:none;
     border-radius:30px;
-    cursor:pointer;
     background:#ff2e63;
     color:white;
+    cursor:pointer;
 }
 
+/* Fotos */
 .galeria img{
     width:250px;
     margin:10px;
     border-radius:20px;
+    animation:fadeIn 2s ease;
 }
 
+/* Fade */
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* Corazones */
 .corazon{
     position:absolute;
     color:red;
@@ -59,6 +70,7 @@ button{
     to{transform:translateY(110vh);}
 }
 
+/* Texto final */
 .final{
     font-size:40px;
 }
@@ -67,20 +79,24 @@ button{
 
 <body>
 
-<div id="pantalla1" class="pantalla">
+<!-- 1 -->
+<div id="p1" class="pantalla">
     <button onclick="iniciar()">❤️ Ábreme ❤️</button>
 </div>
 
-<div id="pantalla2" class="pantalla oculto">
+<!-- 2 -->
+<div id="p2" class="pantalla oculto">
     <h1>❤️ Tengo una sorpresa para ti… ❤️</h1>
 </div>
 
-<div id="pantalla3" class="pantalla oculto">
+<!-- 3 -->
+<div id="p3" class="pantalla oculto">
     <h2>Cada vez falta menos para llenar tu cama de peluches 🧸</h2>
-    <p>Gracias por estos 2 hermosos meses a tu lado 💌</p>
+    <p>Gracias por estos 2 maravillosos meses a tu lado 💌</p>
 </div>
 
-<div id="pantalla4" class="pantalla oculto">
+<!-- 4 -->
+<div id="p4" class="pantalla oculto">
     <div class="galeria">
         <img src="foto1.jpeg">
         <img src="foto2.jpeg">
@@ -90,30 +106,43 @@ button{
     </div>
 </div>
 
-<div id="pantalla5" class="pantalla oculto">
-    <p>
-    Gracias por regalarme estos dos hermosos meses a tu lado.  
-    Te amo infinitamente. ❤️
+<!-- 5 -->
+<div id="p5" class="pantalla oculto">
+    <p style="max-width:80%;">
+        Gracias por regalarme estos dos hermosos meses a tu lado. Quiero que este sea solo el comienzo de una historia llena de alegrías, sonrisas y mucho amor. Esta es mi manera de demostrarte lo que siento por ti. Te amo infinitamente Josune Diaz ❤️
     </p>
 </div>
 
-<div id="final" class="pantalla oculto">
+<!-- 6 -->
+<div id="p6" class="pantalla oculto">
+    <div class="final">🌹</div>
+</div>
+
+<!-- 7 -->
+<div id="p7" class="pantalla oculto">
     <div class="final">❤️<br>Continuará…<br>❤️</div>
 </div>
 
 <script>
+
 function show(id){
     document.querySelectorAll('.pantalla').forEach(p=>p.classList.add('oculto'));
     document.getElementById(id).classList.remove('oculto');
 }
 
 function iniciar(){
-    show('pantalla2');
 
-    setTimeout(()=>show('pantalla3'), 3000);
-    setTimeout(()=>show('pantalla4'), 6000);
-    setTimeout(()=>show('pantalla5'), 10000);
-    setTimeout(()=>show('final'), 14000);
+    show('p2');
+
+    setTimeout(()=>show('p3'), 2500);
+
+    setTimeout(()=>show('p4'), 7500);
+
+    setTimeout(()=>show('p5'), 12000);
+
+    setTimeout(()=>show('p6'), 17000);
+
+    setTimeout(()=>show('p7'), 20000);
 
     corazones();
 }
@@ -128,8 +157,9 @@ function corazones(){
         document.body.appendChild(c);
 
         setTimeout(()=>c.remove(),6000);
-    },300);
+    },250);
 }
+
 </script>
 
 </body>
