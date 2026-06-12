@@ -68,6 +68,13 @@ button{
 .final{
     font-size:40px;
 }
+
+/* Mejor lectura en celular */
+p{
+    max-width:80%;
+    line-height:1.5;
+    padding:0 10px;
+}
 </style>
 </head>
 
@@ -111,7 +118,7 @@ button{
     <div class="final">🌹</div>
 </div>
 
-<!-- 7 ✔️ AGREGADO (FALTABA) -->
+<!-- 7 -->
 <div id="p7" class="pantalla oculto">
     <div class="final">❤️ Continuará… ❤️</div>
 </div>
@@ -127,15 +134,16 @@ function iniciar(){
 
     show('p2');
 
-    setTimeout(()=>show('p3'), 19000);
+    // Cada pantalla dura aproximadamente 12 segundos
+    setTimeout(()=>show('p3'), 12000);
 
-    setTimeout(()=>show('p4'), 26000);
+    setTimeout(()=>show('p4'), 24000);
 
-    setTimeout(()=>show('p5'), 33000);
+    setTimeout(()=>show('p5'), 36000);
 
-    setTimeout(()=>show('p6'), 40000);
+    setTimeout(()=>show('p6'), 48000);
 
-    setTimeout(()=>show('p7'), 47000);
+    setTimeout(()=>show('p7'), 60000);
 
     corazones();
 }
