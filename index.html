@@ -1,124 +1,3 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>❤️ JOSUNE DIAZ ❤️</title>
-
-<style>
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:black;
-    color:white;
-    overflow:hidden;
-    text-align:center;
-}
-
-/* Pantallas */
-.pantalla{
-    position:absolute;
-    width:100%;
-    height:100%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    transition:opacity 1.5s ease;
-}
-
-.oculto{
-    opacity:0;
-    pointer-events:none;
-}
-
-/* Botón */
-button{
-    padding:15px 30px;
-    font-size:22px;
-    border:none;
-    border-radius:30px;
-    background:#ff2e63;
-    color:white;
-    cursor:pointer;
-}
-
-/* Fotos */
-.galeria img{
-    width:250px;
-    margin:10px;
-    border-radius:20px;
-    animation:fadeIn 2s ease;
-}
-
-/* Fade */
-@keyframes fadeIn{
-    from{opacity:0; transform:translateY(20px);}
-    to{opacity:1; transform:translateY(0);}
-}
-
-/* Corazones */
-.corazon{
-    position:absolute;
-    color:red;
-    font-size:20px;
-    animation:caer 5s linear infinite;
-}
-
-@keyframes caer{
-    from{transform:translateY(-100px);}
-    to{transform:translateY(110vh);}
-}
-
-/* Texto final */
-.final{
-    font-size:40px;
-}
-</style>
-</head>
-
-<body>
-
-<!-- 1 -->
-<div id="p1" class="pantalla">
-    <button onclick="iniciar()">❤️ ABREME ❤️</button>
-</div>
-
-<!-- 2 -->
-<div id="p2" class="pantalla oculto">
-    <h1>❤️ TENGO ALGO IMPORTANTE QUE DECIRTE...❤️</h1>
-</div>
-
-<!-- 3 -->
-<div id="p3" class="pantalla oculto">
-    <h2>EN ESTE CORTO TIEMPO HAS MEJORADO MI VIDA EN TODOS LOS ASPECTOS.🧸</h2>
-    <p>GRACIAS POR REGALARME ESTOS DOS HERMOSOS MESES A TU LADO, QUIERO QUE ESTE SEA SOLO EL COMIENZO DE UNA HISTORIA LLENA DE ALEGRIAS, AVENTURAS, SONRISAS Y MUCHO AMOR.❤️</p>
-</div>
-
-<!-- 4 -->
-<div id="p4" class="pantalla oculto">
-    <div class="galeria">
-        <img src="foto1.jpeg">
-    </div>
-</div>
-
-<!-- 5 -->
-<div id="p5" class="pantalla oculto">
-    <p style="max-width:80%;">
-        ESTA ES MI MANERA DE DEMOSTRARTE LO QUE SIENTO POR TI. POR CIERTO... CADA VEZ FALTA MENOS PARA LLENAR TU CAMA DE PELUCHES COMO TE LO PROMETI... TE TENGO UN PEQUEÑO DETALLE.❤️🧸
-    </p>
-</div>
-
-<!-- 6 -->
-<div id="p6" class="pantalla oculto">
-    <div class="final">🌹TE AMO INFINITAMENTE JOSUNE DIAZ🌹</div>
-</div>
-
-<!-- 7 -->
-<div id="p7" class="pantalla oculto">
-    <div class="final">❤️<br>CONTINUARA…<br>❤️</div>
-</div>
-
 <script>
 
 function show(id){
@@ -143,12 +22,6 @@ function iniciar(){
 
     corazones();
 }
-💡 Qué pasó aquí:
-Antes: p5 → p6 tardaba 6 segundos aprox.
-Ahora: p5 → p6 dura 11 segundos aprox.
-Todo lo demás se ajustó para que no se descontrole la secuencia
-
-Si quieres, puedo hacer que esa frase aparezca con efecto máquina de escribir (tipo “typing”) o que se vaya revelando palabra por palabra.
 
 function corazones(){
     setInterval(()=>{
@@ -164,6 +37,3 @@ function corazones(){
 }
 
 </script>
-
-</body>
-</html>
