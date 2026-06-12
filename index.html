@@ -3,58 +3,134 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Para ti ❤️</title>
+<title>Para Ti ❤️</title>
+
 <style>
 body{
     margin:0;
-    font-family:Arial,sans-serif;
-    background:linear-gradient(#ffd6e7,#fff5f8);
+    font-family:Arial, sans-serif;
+    background: black;
+    color:white;
+    overflow:hidden;
     text-align:center;
 }
-h1{
-    color:#c2185b;
-    margin-top:40px;
+
+.pantalla{
+    position:absolute;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    transition:opacity 1.5s ease;
 }
-h2{
-    color:#880e4f;
+
+.oculto{
+    opacity:0;
+    pointer-events:none;
 }
-img{
-    width:320px;
-    max-width:90%;
-    border-radius:20px;
-    box-shadow:0 5px 15px rgba(0,0,0,.3);
-    margin-top:20px;
-}
+
 button{
-    margin-top:30px;
     padding:15px 30px;
-    font-size:22px;
+    font-size:20px;
     border:none;
     border-radius:30px;
-    background:#e91e63;
-    color:white;
     cursor:pointer;
+    background:#ff2e63;
+    color:white;
 }
-#sorpresa{
-    display:none;
-    margin:30px;
-    font-size:24px;
-    color:#ad1457;
+
+.galeria img{
+    width:250px;
+    margin:10px;
+    border-radius:20px;
+}
+
+.corazon{
+    position:absolute;
+    color:red;
+    font-size:20px;
+    animation:caer 5s linear infinite;
+}
+
+@keyframes caer{
+    from{transform:translateY(-100px);}
+    to{transform:translateY(110vh);}
+}
+
+.final{
+    font-size:40px;
 }
 </style>
 </head>
+
 <body>
-<h1>❤️ Tengo una sorpresa para ti ❤️</h1>
-<h2>🧸 Cada vez falta menos para llenar tu cama de peluches</h2>
-<h2>💌 Gracias por estos 2 hermosos meses a tu lado 💌</h2>
-<img src="foto1.jpeg" alt="Nuestra foto">
-<br>
-<button onclick="document.getElementById('sorpresa').style.display='block'">
-❤️ Ábreme ❤️
-</button>
-<div id="sorpresa">
-❤️ Gracias por regalarme estos dos hermosos meses.
-Quiero que esto sea solo el comienzo de una historia llena de sonrisas, alegrias y mucho amor. ❤️🧸
+
+<div id="pantalla1" class="pantalla">
+    <button onclick="iniciar()">❤️ Ábreme ❤️</button>
 </div>
+
+<div id="pantalla2" class="pantalla oculto">
+    <h1>❤️ Tengo una sorpresa para ti… ❤️</h1>
+</div>
+
+<div id="pantalla3" class="pantalla oculto">
+    <h2>Cada vez falta menos para llenar tu cama de peluches 🧸</h2>
+    <p>Gracias por estos 2 hermosos meses a tu lado 💌</p>
+</div>
+
+<div id="pantalla4" class="pantalla oculto">
+    <div class="galeria">
+        <img src="foto1.jpeg">
+        <img src="foto2.jpeg">
+        <img src="foto3.jpeg">
+        <img src="foto4.jpeg">
+        <img src="foto5.jpeg">
+    </div>
+</div>
+
+<div id="pantalla5" class="pantalla oculto">
+    <p>
+    Gracias por regalarme estos dos hermosos meses a tu lado.  
+    Te amo infinitamente. ❤️
+    </p>
+</div>
+
+<div id="final" class="pantalla oculto">
+    <div class="final">❤️<br>Continuará…<br>❤️</div>
+</div>
+
+<script>
+function show(id){
+    document.querySelectorAll('.pantalla').forEach(p=>p.classList.add('oculto'));
+    document.getElementById(id).classList.remove('oculto');
+}
+
+function iniciar(){
+    show('pantalla2');
+
+    setTimeout(()=>show('pantalla3'), 3000);
+    setTimeout(()=>show('pantalla4'), 6000);
+    setTimeout(()=>show('pantalla5'), 10000);
+    setTimeout(()=>show('final'), 14000);
+
+    corazones();
+}
+
+function corazones(){
+    setInterval(()=>{
+        let c=document.createElement("div");
+        c.classList.add("corazon");
+        c.innerHTML="❤️";
+        c.style.left=Math.random()*100+"vw";
+        c.style.animationDuration=(3+Math.random()*3)+"s";
+        document.body.appendChild(c);
+
+        setTimeout(()=>c.remove(),6000);
+    },300);
+}
+</script>
+
 </body>
 </html>
