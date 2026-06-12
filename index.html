@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>❤️ Para Ti ❤️</title>
+<title>❤️ JOSUNE DIAZ ❤️</title>
 
 <style>
 body{
@@ -81,18 +81,18 @@ button{
 
 <!-- 1 -->
 <div id="p1" class="pantalla">
-    <button onclick="iniciar()">❤️ Ábreme ❤️</button>
+    <button onclick="iniciar()">❤️ ABREME ❤️</button>
 </div>
 
 <!-- 2 -->
 <div id="p2" class="pantalla oculto">
-    <h1>❤️ Tengo algo importante que decirte...❤️</h1>
+    <h1>❤️ TENGO ALGO IMPORTANTE QUE DECIRTE...❤️</h1>
 </div>
 
 <!-- 3 -->
 <div id="p3" class="pantalla oculto">
-    <h2>En este tiempo has cambiado mi vida para bien.🧸</h2>
-    <p>Gracias por regalarme estos dos hermosos meses a tu lado, quiero que este sea solo el comienzo de una historia llena de alegrias, sonrisas y mucho amor. Esta es mi manera de demostrarte lo que siento por ti.❤️ 💌</p>
+    <h2>EN ESTE CORTO TIEMPO HAS MEJORADO MI VIDA EN TODOS LOS ASPECTOS.🧸</h2>
+    <p>GRACIAS POR REGALARME ESTOS DOS HERMOSOS MESES A TU LADO, QUIERO QUE ESTE SEA SOLO EL COMIENZO DE UNA HISTORIA LLENA DE ALEGRIAS, AVENTURAS, SONRISAS Y MUCHO AMOR.❤️</p>
 </div>
 
 <!-- 4 -->
@@ -105,7 +105,7 @@ button{
 <!-- 5 -->
 <div id="p5" class="pantalla oculto">
     <p style="max-width:80%;">
-        Por cierto... cada vez falta menos para llenar tu cama de peluches como te prometi, te tengo una sorpresa.❤️
+        ESTA ES MI MANERA DE DEMOSTRARTE LO QUE SIENTO POR TI. POR CIERTO... CADA VEZ FALTA MENOS PARA LLENAR TU CAMA DE PELUCHES COMO TE LO PROMETI... TE TENGO UN PEQUEÑO DETALLE.❤️🧸
     </p>
 </div>
 
@@ -116,7 +116,7 @@ button{
 
 <!-- 7 -->
 <div id="p7" class="pantalla oculto">
-    <div class="final">❤️<br>Continuará…<br>❤️</div>
+    <div class="final">❤️<br>CONTINUARA…<br>❤️</div>
 </div>
 
 <script>
@@ -136,12 +136,19 @@ function iniciar(){
 
     setTimeout(()=>show('p5'), 17000);
 
-    setTimeout(()=>show('p6'), 23000);
+    // +5 segundos extra en esta pantalla (p5)
+    setTimeout(()=>show('p6'), 28000);
 
-    setTimeout(()=>show('p7'), 27000);
+    setTimeout(()=>show('p7'), 32000);
 
     corazones();
 }
+💡 Qué pasó aquí:
+Antes: p5 → p6 tardaba 6 segundos aprox.
+Ahora: p5 → p6 dura 11 segundos aprox.
+Todo lo demás se ajustó para que no se descontrole la secuencia
+
+Si quieres, puedo hacer que esa frase aparezca con efecto máquina de escribir (tipo “typing”) o que se vaya revelando palabra por palabra.
 
 function corazones(){
     setInterval(()=>{
