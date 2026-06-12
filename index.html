@@ -15,7 +15,6 @@ body{
     text-align:center;
 }
 
-/* Pantallas */
 .pantalla{
     position:absolute;
     width:100%;
@@ -32,7 +31,6 @@ body{
     pointer-events:none;
 }
 
-/* Botón */
 button{
     padding:15px 30px;
     font-size:22px;
@@ -43,7 +41,6 @@ button{
     cursor:pointer;
 }
 
-/* Fotos */
 .galeria img{
     width:250px;
     margin:10px;
@@ -56,7 +53,6 @@ button{
     to{opacity:1; transform:translateY(0);}
 }
 
-/* Corazones */
 .corazon{
     position:absolute;
     color:red;
@@ -69,7 +65,6 @@ button{
     to{transform:translateY(110vh);}
 }
 
-/* Texto final */
 .final{
     font-size:40px;
 }
@@ -101,7 +96,8 @@ button{
 <div id="p4" class="pantalla oculto">
     <div class="galeria">
         <img src="foto1.jpeg">
-       
+        <img src="foto2.jpeg">
+        <img src="foto3.jpeg">
     </div>
 </div>
 
@@ -115,6 +111,10 @@ button{
     <div class="final">🌹</div>
 </div>
 
+<!-- 7 ✔️ AGREGADO (FALTABA) -->
+<div id="p7" class="pantalla oculto">
+    <div class="final">❤️ Continuará… ❤️</div>
+</div>
 
 <script>
 
@@ -127,15 +127,15 @@ function iniciar(){
 
     show('p2');
 
-    setTimeout(()=>show('p3'), 7000);
+    setTimeout(()=>show('p3'), 19000);
 
-    setTimeout(()=>show('p4'), 14000);
+    setTimeout(()=>show('p4'), 26000);
 
-    setTimeout(()=>show('p5'), 21000);
+    setTimeout(()=>show('p5'), 33000);
 
-    setTimeout(()=>show('p6'), 28000);
+    setTimeout(()=>show('p6'), 40000);
 
-    setTimeout(()=>show('p7'), 35000);
+    setTimeout(()=>show('p7'), 47000);
 
     corazones();
 }
